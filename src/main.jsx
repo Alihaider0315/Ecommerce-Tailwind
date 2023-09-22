@@ -5,13 +5,16 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
+import { CartItemProvider } from './context/CartItems.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  <CartItemProvider>  
   <BrowserRouter>
     <Header/>
     <App />
     <Footer/>
   </BrowserRouter>
+  </CartItemProvider>
   </React.StrictMode>,
 )
